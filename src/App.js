@@ -1,23 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
+import Inputbox from './Inputbox';
+import React, { useState } from 'react';
 
 function App() {
+  const [taskitems, setTaskitems] = useState([]);
+  const [item, setItem] = useState("");
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>TODO APP with React</h1>
+      <Inputbox item={item} setItem={setItem} setTaskitems={setTaskitems} taskitems={taskitems} />
     </div>
   );
 }
