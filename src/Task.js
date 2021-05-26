@@ -14,9 +14,10 @@ export default function Task({setTaskitems,item, taskItems}) {
     } ) 
     );
  }; 
+    
     return (
         <div className="task">
-            <h3>{item.text}  <button className="btn-complete" onClick={completeHandle}>a</button><button className="btn-delete" onClick={deleteHandle}>X</button></h3>
+            <h3 style={{ textDecoration: item.completed ? 'line-through' : 'none',textDecorationStyle:'solid'}}>{item.text}  <button className="btn-complete" onClick={completeHandle}><i class="bi bi-pencil-square"></i></button><button className="btn-delete" onClick={deleteHandle}><i class="bi bi-trash"></i></button></h3>
         </div>
     )
 }
