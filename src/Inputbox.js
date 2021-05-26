@@ -12,12 +12,15 @@ export default function Inputbox({setTaskitems,taskitems,item,setItem}) {
         // console.log(taskitems);
     }
     return (
-        <div className="warpper">
+        <div className="wrapper">
             <div className="input-form">
             <input type="text" onChange={(e)=>{setItem(e.target.value)}}  value={item}/>
             <button onClick={log}>ADD</button>
             </div>
-           {taskitems.length ? <Tasklist setTaskitems={setTaskitems} taskItems={taskitems}/>: null}
+            <div className="container">
+                {taskitems.length ? <Tasklist setTaskitems={setTaskitems} taskItems={taskitems}/>: null}
+            </div>
+
         </div>
     )
 }
